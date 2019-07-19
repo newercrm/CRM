@@ -1,2 +1,4 @@
 框架搭建使用Mybatis,Spring,SpringMVC三大框架，其中数据源使用C3P0数据源，
 数据使用MySql5.7(8.0版本的需要修改驱动名)。
+遇到问题：
+jar包无法上传，修改github的配置文件.gitignore，将*.jar注释掉。
