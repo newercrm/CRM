@@ -9,10 +9,10 @@
 		<title>某某科技</title>
 		<meta name="keywords" content="某某科技" />
 		<meta name="description" content="某某科技" />
-		<link href="Css/layout.css" rel="stylesheet" type="text/css">
-		<link href="Css/login.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="Js/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="Js/js.js"></script>
+		<link href="ziyuan/Css/layout.css" rel="stylesheet" type="text/css">
+		<link href="ziyuan/Css/login.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="ziyuan/Js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="ziyuan/Js/js.js"></script>
 	</head>
 
 	<body class="login-bg">
@@ -22,7 +22,7 @@
 				<div class="four-top">
 					<div class="logo1 text-center ">
 						<a href="#">
-						<img src="Images/logo.png" width="180px" height="180px">
+						<img src="ziyuan/Images/logo.png" width="180px" height="180px">
 					</div>
 					</a>
 					<div class="logo-color margin-big-top text-big text-center">

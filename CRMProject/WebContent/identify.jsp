@@ -2,27 +2,28 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
+<head>
 		<meta charset="utf-8">
 		<title>控制台</title>
-		<link rel="stylesheet" type="text/css" href="Css/identify.css" />
-		<link rel="stylesheet" type="text/css" href="Css/layout.css" />
-		<link rel="stylesheet" type="text/css" href="Css/account.css" />
-		<link rel="stylesheet" type="text/css" href="Css/style.css" />
-		<link rel="stylesheet" type="text/css" href="Css/control_index.css" />
-		<script type="text/javascript" src="Js/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="Js/layer/layer.js"></script>
-		<script type="text/javascript" src="Js/haidao.offcial.general.js"></script>
-		<script type="text/javascript" src="Js/select.js"></script>
-		<script type="text/javascript" src="Js/haidao.validate.js"></script>
+		<link rel="stylesheet" type="text/css" href="ziyuan/Css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="ziyuan/Css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="ziyuan/Css/account.css" />
+		<link rel="stylesheet" type="text/css" href="ziyuan/Css/style.css" />
+		<link rel="stylesheet" type="text/css" href="ziyuan/Css/control_index.css" />
+		<script type="text/javascript" src="ziyuan/Js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="ziyuan/Js/layer/layer.js"></script>
+		<script type="text/javascript" src="ziyuan/Js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="ziyuan/Js/select.js"></script>
+		<script type="text/javascript" src="ziyuan/Js/haidao.validate.js"></script>
 	</head>
+
 
 	<body>
 		<div class="view-topbar">
 			<div class="topbar-console">
 				<div class="tobar-head fl">
 					<a href="#" class="topbar-logo fl">
-					<span><img src="Images/logo.png" width="20" height="20"/></span>
+					<span><img src="ziyuan/Images/logo.png" width="20" height="20"/></span>
 					</a>
 					<a href="index.jsp" class="topbar-home-link topbar-btn text-center fl"><span>管理控制台</span></a>
 				</div>
@@ -88,7 +89,7 @@
 						<ul class="sidebar-trans">
 							<li>
 								<a href="webSet.jsp">
-									<b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/Images/icon_author.png" width="16" height="16" /></b>
 									<span class="text-normal">产品管理</span>
 								</a>
 							</li>
@@ -113,13 +114,13 @@
 
 							<li>
 								<a href="identify.jsp">
-									<b class="sidebar-icon"><img src="Images/icon_authentication.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/Images/icon_authentication.png" width="16" height="16" /></b>
 									<span class="text-normal">员工信息</span>
 								</a>
 							</li>
 							<li>
 								<a href="message.jsp">
-									<b class="sidebar-icon"><img src="Images/icon_news.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/Images/icon_news.png" width="16" height="16" /></b>
 									<span class="text-normal">日志管理</span>
 								</a>
 							</li>
@@ -138,13 +139,13 @@
 
 							<li>
 								<a href="identify.jsp">
-									<b class="sidebar-icon"><img src="Images/icon_authentication.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/Images/icon_authentication.png" width="16" height="16" /></b>
 									<span class="text-normal">客户详情</span>
 								</a>
 							</li>
 							<li>
 								<a href="message.jsp">
-									<b class="sidebar-icon"><img src="Images/icon_news.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/Images/icon_news.png" width="16" height="16" /></b>
 									<span class="text-normal">合同</span>
 								</a>
 							</li>
@@ -166,7 +167,7 @@
 							<a class="class-detail fl " href="#">
 							<div class="class-detail-top">
 								<div class="text-center indentify-icon">
-									<img src="Images/identify_personal.png">
+									<img src="ziyuan/Images/identify_personal.png">
 								</div>
 								<h3 class="text-center">个人认证</h3>
 								<p class="margin-tb padding-bottom text-justify info">
@@ -196,7 +197,7 @@
 							<a class="class-detail fl " href="#">
 							<div class="class-detail-top">
 								<div class="text-center indentify-icon">
-									<img src="Images/identify_enterprise.png">
+									<img src="ziyuan/Images/identify_enterprise.png">
 								</div>
 								<h3 class="text-center">企业认证</h3>
 								<p class="margin-tb padding-bottom text-justify info">
@@ -230,7 +231,7 @@
 							<a class="class-detail fl disabled" href="#">
 							<div class="class-detail-top">
 								<div class="text-center indentify-icon">
-									<img src="Images/identify_developer.png">
+									<img src="ziyuan/Images/identify_developer.png">
 								</div>
 								<h3 class="text-center">服务商认证</h3>
 								<p class="margin-tb padding-bottom text-justify info">

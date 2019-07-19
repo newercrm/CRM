@@ -2,25 +2,24 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
+<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 		<title>某某科技</title>
 		<meta name="keywords" content="某某科技" />
 		<meta name="description" content="某某科技" />
-		<link href="Css/layout.css" rel="stylesheet" type="text/css">
-		<link href="Css/login.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="Js/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="Js/js.js"></script>
-		<script type="text/javascript" src="Js/jquery.cookie.js"></script>
+		<link href="ziyuan/Css/layout.css" rel="stylesheet" type="text/css">
+		<link href="ziyuan/Css/login.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="ziyuan/Js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="ziyuan/Js/js.js"></script>
+		<script type="text/javascript" src="ziyuan/Js/jquery.cookie.js"></script>
 	</head>
-
 	<body class="login-bg">
 		<!--登录-->
 		<div class="main">
 			<div class="login-dom">
 				<div class="logo text-center">
-					<img src="Images/logo.png" width="180" height="180">
+					<img src="ziyuan/Images/logo.png" width="180" height="180">
 				</div>
 				<!--注册-->
 				<div class="text-big text-center logo-color">同一个账号，连接一切</div>
@@ -59,7 +58,7 @@
 			</div>
 		</div>
 		</div>
-		<script type="text/javascript" src="Js/Validform_v5.3.2_min.js"></script>
+		<script type="text/javascript" src="ziyuan/Js/Validform_v5.3.2_min.js"></script>
 		<script type="text/javascript">
 			/*动画（注册）*/
 			$(document).ready(function(e) {
