@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>	
+	<settings>
+		<!-- 配置Log4j2 -->
+		<setting name="logImpl" value="LOG4J2"/>
+	</settings>
+	
+	<mappers>
+		<!-- 注解配置 在该位置注册 存放接口全称 -->
+		 <mapper class="com.crm.dao.RoleMapper"/>
+	</mappers>
+</configuration>
