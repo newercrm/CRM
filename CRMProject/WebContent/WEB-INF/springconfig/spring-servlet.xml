@@ -19,10 +19,9 @@
 	
 <!-- spring controller bean 通过name属性值来体现servlet映射路径名称 -->		
 <!-- <bean name="/index" class="com.hsiao.controller.IndexServlet"/> -->
-
-<context:component-scan base-package="com.crm.controller" />
+<context:component-scan base-package="com.crm" />
 <!-- mvc框架下解析MVC的注解必须要有解析器 -->
 <mvc:annotation-driven  />
-<mvc:resources location="/resources/" mapping="/ziyuan/**"></mvc:resources>
+<!-- <mvc:resources location="/resources/" mapping="/ziyuan/**"></mvc:resources> -->
 	
 </beans>

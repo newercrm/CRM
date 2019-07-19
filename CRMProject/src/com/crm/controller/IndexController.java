@@ -2,13 +2,13 @@ package com.crm.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+
 import org.springframework.web.servlet.ModelAndView;
 
-import com.crm.factory.SpringBeanFactory;
 import com.crm.pojo.Role;
 import com.crm.service.RoleService;
 
@@ -21,16 +21,14 @@ import com.crm.service.RoleService;
  * 配置请求映射路径和方法,在对应的处理方法上标记@RequestMapping		
  */
 @Controller
-@SessionAttributes
 public class IndexController {
-		
-	
+	@Autowired
+	private RoleService roleService;
 	
 	@RequestMapping(path="/index")
 	public ModelAndView index() {
-		AnnotationConfigApplicationContext context = SpringBeanFactory.getAnnotationCpntext();
-		RoleService service=context.getBean("roleServiceImpl",RoleService.class );
-		List<Role> list=service.selectAllTeacher();
+		
+		List<Role> list=roleService.selectAllTeacher();
 		ModelAndView modelAndView=new ModelAndView();
 		modelAndView.addObject("mess",list);
 		modelAndView.setViewName("test.jsp");

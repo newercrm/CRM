@@ -8,10 +8,10 @@
 		<title>某某科技</title>
 		<meta name="keywords" content="某某科技" />
 		<meta name="description" content="某某科技" />
-		<link href="ziyuan/Css/layout.css" rel="stylesheet" type="text/css">
-		<link href="ziyuan/Css/login.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="ziyuan/Js/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="ziyuan/Js/js.js"></script>
+		<link href="ziyuan/css/layout.css" rel="stylesheet" type="text/css">
+		<link href="ziyuan/css/login.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="ziyuan/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="ziyuan/js/js.js"></script>
 	</head>
 	<style>
 		.ibar {display: none;}
@@ -22,7 +22,7 @@
 			<div class="login-dom login-max">
 				<div class="logo text-center">
 					<a href="#">
-					<img src="ziyuan/Images/logo.png" width="180px" height="180px">
+					<img src="ziyuan/images/logo.png" width="180px" height="180px">
 					</a>
 				</div>
 				<div class="login container " id="login">
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="ziyuan/Js/Validform_v5.3.2_min.js"></script>
+	<script type="text/javascript" src="ziyuan/js/Validform_v5.3.2_min.js"></script>
 	<script type="text/javascript">
 		function popup_msg(msg) {
 			$(".popup").html("" + msg + "");

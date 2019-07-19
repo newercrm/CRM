@@ -8,18 +8,18 @@
 		<title>某某科技</title>
 		<meta name="keywords" content="某某科技" />
 		<meta name="description" content="某某科技" />
-		<link href="ziyuan/Css/layout.css" rel="stylesheet" type="text/css">
-		<link href="ziyuan/Css/login.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="ziyuan/Js/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="ziyuan/Js/js.js"></script>
-		<script type="text/javascript" src="ziyuan/Js/jquery.cookie.js"></script>
+		<link href="ziyuan/css/layout.css" rel="stylesheet" type="text/css">
+		<link href="ziyuan/css/login.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="ziyuan/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="ziyuan/js/js.js"></script>
+		<script type="text/javascript" src="ziyuan/js/jquery.cookie.js"></script>
 	</head>
 	<body class="login-bg">
 		<!--登录-->
 		<div class="main">
 			<div class="login-dom">
 				<div class="logo text-center">
-					<img src="ziyuan/Images/logo.png" width="180" height="180">
+					<img src="ziyuan/images/logo.png" width="180" height="180">
 				</div>
 				<!--注册-->
 				<div class="text-big text-center logo-color">同一个账号，连接一切</div>
@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		</div>
-		<script type="text/javascript" src="ziyuan/Js/Validform_v5.3.2_min.js"></script>
+		<script type="text/javascript" src="ziyuan/js/Validform_v5.3.2_min.js"></script>
 		<script type="text/javascript">
 			/*动画（注册）*/
 			$(document).ready(function(e) {

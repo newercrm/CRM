@@ -4,8 +4,18 @@ public class Role {
     private Long rid;
 
     private String rolename;
+    
 
-    public Long getRid() {
+    public Role() {
+		
+	}
+
+	public Role(Long rid, String rolename) {
+		this.rid = rid;
+		this.rolename = rolename;
+	}
+
+	public Long getRid() {
         return rid;
     }
 

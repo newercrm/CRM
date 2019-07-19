@@ -2,19 +2,19 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
+<head>
 		<meta charset="utf-8">
 		<title>控制台</title>
-		<link rel="stylesheet" type="text/css" href="ziyuan/Css/identify.css" />
-		<link rel="stylesheet" type="text/css" href="ziyuan/Css/layout.css" />
-		<link rel="stylesheet" type="text/css" href="ziyuan/Css/account.css" />
-		<link rel="stylesheet" type="text/css" href="ziyuan/Css/style.css" />
-		<link rel="stylesheet" type="text/css" href="ziyuan/Css/control_index.css" />
-		<script type="text/javascript" src="ziyuan/Js/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="ziyuan/Js/layer/layer.js"></script>
-		<script type="text/javascript" src="ziyuan/Js/haidao.offcial.general.js"></script>
-		<script type="text/javascript" src="ziyuan/Js/select.js"></script>
-		<script type="text/javascript" src="ziyuan/Js/haidao.validate.js"></script>
+		<link rel="stylesheet" type="text/css" href="ziyuan/css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="ziyuan/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="ziyuan/css/account.css" />
+		<link rel="stylesheet" type="text/css" href="ziyuan/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="ziyuan/css/control_index.css" />
+		<script type="text/javascript" src="ziyuan/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="ziyuan/js/layer/layer.js"></script>
+		<script type="text/javascript" src="ziyuan/js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="ziyuan/js/select.js"></script>
+		<script type="text/javascript" src="ziyuan/js/haidao.validate.js"></script>
 	</head>
 
 	<body>
@@ -22,7 +22,7 @@
 			<div class="topbar-console">
 				<div class="tobar-head fl">
 					<a href="#" class="topbar-logo fl">
-					<span><img src="ziyuan/Images/logo.png" width="20" height="20"/></span>
+					<span><img src="ziyuan/images/logo.png" width="20" height="20"/></span>
 					</a>
 					<a href="index.jsp" class="topbar-home-link topbar-btn text-center fl"><span>管理控制台</span></a>
 				</div>
@@ -88,14 +88,14 @@
 						<ul class="sidebar-trans">
 							<li>
 								<a href="webSet.jsp">
-									<b class="sidebar-icon"><img src="ziyuan/Images/icon_author.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/images/icon_author.png" width="16" height="16" /></b>
 									<span class="text-normal">产品管理</span>
 								</a>
 							</li>
 
 							<!-- <li>
 								<a href="#">
-									<b class="sidebar-icon"><img src="Images/icon_market.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/images/icon_market.png" width="16" height="16" /></b>
 									<span class="text-normal">云市场</span>
 								</a>
 							</li> -->
@@ -113,13 +113,13 @@
 
 							<li>
 								<a href="identify.jsp">
-									<b class="sidebar-icon"><img src="ziyuan/Images/icon_authentication.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/images/icon_authentication.png" width="16" height="16" /></b>
 									<span class="text-normal">员工信息</span>
 								</a>
 							</li>
 							<li>
 								<a href="message.jsp">
-									<b class="sidebar-icon"><img src="ziyuan/Images/icon_news.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/images/icon_news.png" width="16" height="16" /></b>
 									<span class="text-normal">日志管理</span>
 								</a>
 							</li>
@@ -138,13 +138,13 @@
 
 							<li>
 								<a href="identify.jsp">
-									<b class="sidebar-icon"><img src="ziyuan/Images/icon_authentication.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/images/icon_authentication.png" width="16" height="16" /></b>
 									<span class="text-normal">客户详情</span>
 								</a>
 							</li>
 							<li>
 								<a href="message.jsp">
-									<b class="sidebar-icon"><img src="ziyuan/Images/icon_news.png" width="16" height="16" /></b>
+									<b class="sidebar-icon"><img src="ziyuan/images/icon_news.png" width="16" height="16" /></b>
 									<span class="text-normal">合同</span>
 								</a>
 							</li>
@@ -171,7 +171,7 @@
 										</p>
 									</div>
 									<span class="fr icon-head">
-										<img src="ziyuan/Images/noavatar_middle.gif" alt="账户头像">
+										<img src="ziyuan/images/noavatar_middle.gif" alt="账户头像">
 									</span>
 								</dt>
 								<dd class="padding-big clearfix">
