@@ -33,7 +33,7 @@ public class IndexController {
 		List<Role> list=service.selectAllTeacher();
 		ModelAndView modelAndView=new ModelAndView();
 		modelAndView.addObject("mess",list);
-		modelAndView.setViewName("index.jsp");
+		modelAndView.setViewName("test.jsp");
 		return modelAndView;
 	}
 }

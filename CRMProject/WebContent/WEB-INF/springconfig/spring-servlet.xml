@@ -23,6 +23,6 @@
 <context:component-scan base-package="com.crm.controller" />
 <!-- mvc框架下解析MVC的注解必须要有解析器 -->
 <mvc:annotation-driven  />
-<!-- <mvc:resources location="/resources/" mapping="/ziyuan/**"></mvc:resources> -->
+<mvc:resources location="/resources/" mapping="/ziyuan/**"></mvc:resources>
 	
 </beans>
