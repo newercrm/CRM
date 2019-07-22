@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.crm.dao.LogMapper;
-import com.crm.dao.RoleMapper;
 import com.crm.pojo.Log;
 import com.crm.service.LogService;
 
@@ -25,8 +24,8 @@ public class LogServiceImpl implements LogService {
 	
 	@Override
 	public List<Log> findAllLog() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Log> list = logMapper.findAllLog();
+		return list;
 	}
 
 }

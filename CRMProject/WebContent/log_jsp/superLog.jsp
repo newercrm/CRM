@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="/logo/logTilte.jsp"  %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+String path1 = request.getContextPath();
+String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path1+"/";
+%>
+
+ <c:set var="base" value="<%=basePath1 %>"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -155,23 +162,50 @@
 		<table id="dg" title="日志管理" class="easyui-datagrid"
 	 fitColumns="true" pagination="true" rownumbers="true"
 	 url="${pageContext.request.contextPath}/saleChance/list.do" fit="true" toolbar="#tb">
-	 <thead>
+	  <thead>
 	 	<tr>
 	 		<th field="cb" checkbox="true" align="center"></th>
 	 		<th field="id" width="50" align="center">编号</th>
 	 		<!--<th field="chanceSource" width="50" align="center" hidden="true">机会来源</th>-->
 	 		<th field="customerName" width="100" align="center">客户名称</th>
-	 		<th field="cgjl" width="50" align="center" hidden="true">成功几率</th>
+	 		<th field="linkPhone" width="100" align="center">客户联系电话</th>
 	 		<th field="overView" width="200" align="center">概要</th>
 	 		<th field="linkMan" width="100" align="center">联系人</th>
 	 		<th field="linkPhone" width="100" align="center">联系电话</th>
-	 		<th field="description" width="50" align="center" hidden="true">机会描述</th>
+	 		<th field="createTime" width="100" align="center">任务开始时间</th>
+	 		<th field="createTime" width="100" align="center">任务结束时间</th>
 	 		<th field="createMan" width="100" align="center" >创建人</th>
 	 		<th field="createTime" width="100" align="center">创建时间</th>
 	 		<th field="state" width="100" align="center" formatter="formatState">状态</th>
 	 		<th field="assignMan" width="50" align="center" hidden="true">指派人</th>
 	 		<th field="assignTime" width="50" align="center" hidden="true">指派时间</th>
 	 	</tr>
+	 	<c:forEach items="${logMess}" var="mm">
+		<tr>
+	 		<th field="cb" checkbox="true" align="center"></th>
+	 		<th field="id" width="50" align="center">${mm.lid}</th>
+	 		<!--<th field="chanceSource" width="50" align="center" hidden="true">机会来源</th>-->
+	 		<th field="customerName" width="100" align="center">${mm.client.cname}</th>
+	 		<th field="linkPhone" width="100" align="center">${mm.client.ctel}</th>
+	 		<th field="overView" width="200" align="center">${mm.logmessage}</th>
+	 		<th field="linkMan" width="100" align="center">${mm.emp.ename }</th>
+	 		<th field="linkPhone" width="100" align="center">${mm.emp.etel}</th>
+	 		<th field="createTime" width="100" align="center">${mm.starttime }</th>
+	 		<th field="createTime" width="100" align="center">${mm.endtime }</th>
+	 		<th field="createMan" width="100" align="center" >${mm.emp.ename }</th>
+	 		<th field="createTime" width="100" align="center">${mm.logtime }</th>
+	 		<th field="state" width="100" align="center" formatter="formatState">
+	 		<c:if test="${mm.lstate==0}">
+	 		<span style="color: red">未完成</span>
+	 		</c:if>
+	 		<c:if test="${mm.lstate==1}">
+	 		已完成
+	 		</c:if>
+	 		</th>
+	 		<th field="assignMan" width="50" align="center" hidden="true">指派人</th>
+	 		<th field="assignTime" width="50" align="center" hidden="true">指派时间</th>
+	 	</tr>
+		</c:forEach>
 	 </thead>
 	</table>
 	<div id="tb">

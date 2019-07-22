@@ -9,7 +9,7 @@ public class Emp {
 
     private String ename;
 
-    private Long etel;
+    private String etel;
 
     private Long eRid;
 
@@ -43,11 +43,11 @@ public class Emp {
         this.ename = ename == null ? null : ename.trim();
     }
 
-    public Long getEtel() {
+    public String getEtel() {
         return etel;
     }
 
-    public void setEtel(Long etel) {
+    public void setEtel(String etel) {
         this.etel = etel;
     }
 
@@ -82,4 +82,12 @@ public class Emp {
     public void setEbirthday(Date ebirthday) {
         this.ebirthday = ebirthday;
     }
+
+	@Override
+	public String toString() {
+		return "Emp [eid=" + eid + ", epass=" + epass + ", ename=" + ename + ", etel=" + etel + ", eRid=" + eRid
+				+ ", eAid=" + eAid + ", estate=" + estate + ", ebirthday=" + ebirthday + ", hashCode()=" + hashCode()
+				+ "]";
+	}
+    
 }

@@ -22,7 +22,7 @@ public class RoleServiceImpl implements RoleService{
 	private RoleMapper roleMapper;
 		
 	public List<Role> selectAllTeacher(){
-		log.debug("RoleMapperImpl");
+		
 		return roleMapper.findAllRole();
 	}
 }

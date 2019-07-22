@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../ziyuan/css/account.css" />
 <link rel="stylesheet" type="text/css" href="../ziyuan/css/style.css" />
 <link rel="stylesheet" type="text/css"
-	href="ziyuan/css/control_index.css" />
+	href="../ziyuan/css/control_index.css" />
 <script type="text/javascript" src="../ziyuan/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="../ziyuan/js/layer/layer.js"></script>
 <script type="text/javascript" src="../ziyuan/js/haidao.offcial.general.js"></script>

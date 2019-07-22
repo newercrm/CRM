@@ -1,5 +1,7 @@
 package com.crm.pojo;
 
+import java.math.BigDecimal;
+
 public class Client {
     private Long cid;
 
@@ -11,7 +13,7 @@ public class Client {
 
     private Integer cstate;
 
-    private Long ctel;
+    private String ctel;
 
     private String caddress;
 
@@ -59,11 +61,11 @@ public class Client {
         this.cstate = cstate;
     }
 
-    public Long getCtel() {
+    public String getCtel() {
         return ctel;
     }
 
-    public void setCtel(Long ctel) {
+    public void setCtel(String ctel) {
         this.ctel = ctel;
     }
 
@@ -90,4 +92,12 @@ public class Client {
     public void setCemail(String cemail) {
         this.cemail = cemail == null ? null : cemail.trim();
     }
+
+	@Override
+	public String toString() {
+		return "Client [cid=" + cid + ", cname=" + cname + ", cEid=" + cEid + ", cAid=" + cAid + ", cstate=" + cstate
+				+ ", ctel=" + ctel + ", caddress=" + caddress + ", cqq=" + cqq + ", cemail=" + cemail + ", hashCode()="
+				+ hashCode() + "]";
+	}
+    
 }

@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+ <c:set var="base" value="<%=basePath %>"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -92,7 +99,7 @@
 									height="16" /></b> <span class="text-normal">员工信息</span>
 						</a></li>
 						<li><a href="../log_jsp/log.jsp"> <b class="sidebar-icon"><img
-									src="resources/images/icon_news.png" width="16" height="16" /></b>
+									src="${base}fingLog" width="16" height="16" /></b>
 								<span class="text-normal">日志管理</span>
 						</a></li>
 
