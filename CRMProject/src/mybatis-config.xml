@@ -10,5 +10,6 @@
 	<mappers>
 		<!-- 注解配置 在该位置注册 存放接口全称 -->
 		 <mapper class="com.crm.dao.RoleMapper"/>
+		 <mapper class="com.crm.dao.LogMapper"/>
 	</mappers>
 </configuration>

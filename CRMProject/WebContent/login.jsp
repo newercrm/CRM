@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<c:set var="base" value="<%=basePath %>"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -41,11 +48,15 @@
 								<input type="password" placeholder="密码" datatype="*" id="password" name="password" nullmsg="请填写帐号密码">
 							</div>
 						</div>
+						 
 						<input type="hidden" name="formhash" value="5abb5d21"/>
-						<input type="submit" class="btn text-center login-btn" value="立即登录">
+						<input type="submit" class="btn text-center login-btn    "value="员工登录">
+						<input type="submit" class="btn text-center login-btn   " value="客户登录">
+						<input type="submit" class="btn text-center login-btn   " value="经理登录">
+						 
 					</form>
 					<div class="forget">
-						<a href="repassword.jsp" class="forget-pwd text-small fl">忘记登录密码？</a><a href="register.jsp" class="forget-new text-small fr" id="forget-new">创建一个新账号</a>
+						<a href="updatepass.jsp" class="forget-pwd text-small fl">忘记登录密码？</a><a href="register.jsp" class="forget-new text-small fr" id="forget-new">创建一个新账号</a>
 					</div>
 				</div>
 			</div>
@@ -61,7 +72,7 @@
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="ziyuan/js/Validform_v5.3.2_min.js"></script>
+	<script type="text/javascript" src="Js/Validform_v5.3.2_min.js"></script>
 	<script type="text/javascript">
 		function popup_msg(msg) {
 			$(".popup").html("" + msg + "");
