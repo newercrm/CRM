@@ -1,7 +1,5 @@
 package com.crm.pojo;
 
-import java.math.BigDecimal;
-
 public class Client {
     private Long cid;
 
@@ -17,87 +15,105 @@ public class Client {
 
     private String caddress;
 
-    private Long cqq;
+    private String cqq;
 
     private String cemail;
 
-    public Long getCid() {
-        return cid;
-    }
+	public Long getCid() {
+		return cid;
+	}
 
-    public void setCid(Long cid) {
-        this.cid = cid;
-    }
+	public void setCid(Long cid) {
+		this.cid = cid;
+	}
 
-    public String getCname() {
-        return cname;
-    }
+	public String getCname() {
+		return cname;
+	}
 
-    public void setCname(String cname) {
-        this.cname = cname == null ? null : cname.trim();
-    }
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
 
-    public String getcEid() {
-        return cEid;
-    }
+	public String getcEid() {
+		return cEid;
+	}
 
-    public void setcEid(String cEid) {
-        this.cEid = cEid == null ? null : cEid.trim();
-    }
+	public void setcEid(String cEid) {
+		this.cEid = cEid;
+	}
 
-    public Long getcAid() {
-        return cAid;
-    }
+	public Long getcAid() {
+		return cAid;
+	}
 
-    public void setcAid(Long cAid) {
-        this.cAid = cAid;
-    }
+	public void setcAid(Long cAid) {
+		this.cAid = cAid;
+	}
 
-    public Integer getCstate() {
-        return cstate;
-    }
+	public Integer getCstate() {
+		return cstate;
+	}
 
-    public void setCstate(Integer cstate) {
-        this.cstate = cstate;
-    }
+	public void setCstate(Integer cstate) {
+		this.cstate = cstate;
+	}
 
-    public String getCtel() {
-        return ctel;
-    }
+	public String getCtel() {
+		return ctel;
+	}
 
-    public void setCtel(String ctel) {
-        this.ctel = ctel;
-    }
+	public void setCtel(String ctel) {
+		this.ctel = ctel;
+	}
 
-    public String getCaddress() {
-        return caddress;
-    }
+	public String getCaddress() {
+		return caddress;
+	}
 
-    public void setCaddress(String caddress) {
-        this.caddress = caddress == null ? null : caddress.trim();
-    }
+	public void setCaddress(String caddress) {
+		this.caddress = caddress;
+	}
 
-    public Long getCqq() {
-        return cqq;
-    }
+	public String getCqq() {
+		return cqq;
+	}
 
-    public void setCqq(Long cqq) {
-        this.cqq = cqq;
-    }
+	public void setCqq(String cqq) {
+		this.cqq = cqq;
+	}
 
-    public String getCemail() {
-        return cemail;
-    }
+	public String getCemail() {
+		return cemail;
+	}
 
-    public void setCemail(String cemail) {
-        this.cemail = cemail == null ? null : cemail.trim();
-    }
+	public void setCemail(String cemail) {
+		this.cemail = cemail;
+	}
+
+	public Client(Long cid, String cname, String cEid, Long cAid, Integer cstate, String ctel, String caddress,
+			String cqq, String cemail) {
+		super();
+		this.cid = cid;
+		this.cname = cname;
+		this.cEid = cEid;
+		this.cAid = cAid;
+		this.cstate = cstate;
+		this.ctel = ctel;
+		this.caddress = caddress;
+		this.cqq = cqq;
+		this.cemail = cemail;
+	}
+
+	public Client() {
+		super();
+	}
 
 	@Override
 	public String toString() {
 		return "Client [cid=" + cid + ", cname=" + cname + ", cEid=" + cEid + ", cAid=" + cAid + ", cstate=" + cstate
-				+ ", ctel=" + ctel + ", caddress=" + caddress + ", cqq=" + cqq + ", cemail=" + cemail + ", hashCode()="
-				+ hashCode() + "]";
+				+ ", ctel=" + ctel + ", caddress=" + caddress + ", cqq=" + cqq + ", cemail=" + cemail + "]";
 	}
-    
+
+   
 }
