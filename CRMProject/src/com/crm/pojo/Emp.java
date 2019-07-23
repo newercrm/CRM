@@ -24,6 +24,9 @@ public class Emp {
     public Emp() {
 		super();
 	}
+    public Emp(Long eid) {
+    	this.eid=eid;
+    }
     
 	public Emp(Long eid, String epass, String ename, String etel, Long eRid, Long eAid, Integer estate, Date ebirthday) {
 		super();

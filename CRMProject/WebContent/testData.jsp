@@ -13,6 +13,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>dao层方法测试界面</title>
 </head>
 <body>
-<c:out value="${emp}"></c:out>
+<c:out value="${num}"></c:out>
 </body>
 </html>

@@ -20,8 +20,9 @@ public class Client {
     private Long cqq;
 
     private String cemail;
+   
 
-    public Long getCid() {
+	public Long getCid() {
         return cid;
     }
 
