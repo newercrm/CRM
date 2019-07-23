@@ -1,6 +1,6 @@
 package com.crm.pojo;
 
-import java.math.BigDecimal;
+
 
 public class Client {
     private Long cid;
@@ -20,7 +20,17 @@ public class Client {
     private Long cqq;
 
     private String cemail;
-   
+    
+    private Area area;
+    
+
+	public Area getArea() {
+		return area;
+	}
+
+	public void setArea(Area area) {
+		this.area = area;
+	}
 
 	public Long getCid() {
         return cid;
