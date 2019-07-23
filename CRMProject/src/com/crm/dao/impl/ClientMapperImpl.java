@@ -59,6 +59,17 @@ public class ClientMapperImpl extends SqlSessionDaoSupport implements ClientMapp
 	private static String changToNameSpace(String methodName) {
         return ANMESPACE + methodName;
     }
+
+	@Override
+	public Client selectbycid(String cid) {
+		 return this.getSqlSessionTemplate().selectOne(changToNameSpace("selectbycid"),cid);
+	}
+
+	@Override
+	public List<Client> selectBycname(String cname) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }

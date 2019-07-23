@@ -23,4 +23,10 @@ public class ClientServiceImpl implements ClientService{
 		return clientMapper.selectclient();
 	}
 
+	@Override
+	public Client selectbycid(String cid) {
+		// TODO Auto-generated method stub
+		return clientMapper.selectbycid(cid);
+	}
+
 }

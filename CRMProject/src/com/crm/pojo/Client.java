@@ -18,6 +18,17 @@ public class Client {
     private String cqq;
 
     private String cemail;
+    
+    private Area area;
+    
+
+	public Area getArea() {
+		return area;
+	}
+
+	public void setArea(Area area) {
+		this.area = area;
+	}
 
 	public Long getCid() {
 		return cid;
@@ -92,7 +103,7 @@ public class Client {
 	}
 
 	public Client(Long cid, String cname, String cEid, Long cAid, Integer cstate, String ctel, String caddress,
-			String cqq, String cemail) {
+			String cqq, String cemail, Area area) {
 		super();
 		this.cid = cid;
 		this.cname = cname;
@@ -103,6 +114,7 @@ public class Client {
 		this.caddress = caddress;
 		this.cqq = cqq;
 		this.cemail = cemail;
+		this.area = area;
 	}
 
 	public Client() {
@@ -112,8 +124,15 @@ public class Client {
 	@Override
 	public String toString() {
 		return "Client [cid=" + cid + ", cname=" + cname + ", cEid=" + cEid + ", cAid=" + cAid + ", cstate=" + cstate
-				+ ", ctel=" + ctel + ", caddress=" + caddress + ", cqq=" + cqq + ", cemail=" + cemail + "]";
+				+ ", ctel=" + ctel + ", caddress=" + caddress + ", cqq=" + cqq + ", cemail=" + cemail + ", area=" + area
+				+ ", getArea()=" + getArea() + ", getCid()=" + getCid() + ", getCname()=" + getCname() + ", getcEid()="
+				+ getcEid() + ", getcAid()=" + getcAid() + ", getCstate()=" + getCstate() + ", getCtel()=" + getCtel()
+				+ ", getCaddress()=" + getCaddress() + ", getCqq()=" + getCqq() + ", getCemail()=" + getCemail()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 	}
+
+	
 
    
 }

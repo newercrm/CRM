@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -30,5 +31,17 @@ public class ClientController {
 		return modelAndView;
 		
 	}
+	@RequestMapping(path="/kehu/{aaa}")
+	@ResponseBody
+	
+	public ModelAndView kehu(@PathVariable("aaa")String  cid){
+		Client client=(Client) clientService.selectbycid(cid);
+		ModelAndView modelAndView=new ModelAndView();
+		modelAndView.addObject("messss",client);
+		modelAndView.setViewName("/text2.jsp");
+		return modelAndView;
+		
+	}
+	 
 
 }
