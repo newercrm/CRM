@@ -10,11 +10,10 @@ import org.springframework.stereotype.Repository;
 
 import com.crm.dao.EmpMapper;
 import com.crm.pojo.Emp;
-import com.crm.pojo.Log;
 @Repository
 public class EmpMapperImpl extends SqlSessionDaoSupport implements EmpMapper {
 
-	private static final String ANMESPACE = "com.crm.dao.LogMapper.";
+	private static final String ANMESPACE = "com.crm.dao.EmpMapper.";
 
 	// 注入模板类
 	@Autowired
@@ -30,5 +29,17 @@ public class EmpMapperImpl extends SqlSessionDaoSupport implements EmpMapper {
 
 	private static String changeToNameSpace(String methodName) {
 		return ANMESPACE + methodName;
+	}
+	
+	@Override
+	public List<Emp> findAllEmp() {
+		List<Emp> list = this.getSqlSessionTemplate().selectList(changeToNameSpace("findAllEmp"));
+		return list;
+	}
+
+	@Override
+	public List<Emp> findEmpByID(Emp emp) {
+		List<Emp> list = this.getSqlSessionTemplate().selectList(changeToNameSpace("findEmpByID"),emp.getEid());
+		return list;
 	}
 }

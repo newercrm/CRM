@@ -17,9 +17,43 @@ public class Emp {
 
     private Integer estate;
 
+    private Area area;
+    
     private Date ebirthday;
+    
+    public Emp() {
+		super();
+	}
+    
+	public Emp(Long eid, String epass, String ename, String etel, Long eRid, Long eAid, Integer estate, Date ebirthday) {
+		super();
+		this.eid = eid;
+		this.epass = epass;
+		this.ename = ename;
+		this.etel = etel;
+		this.eRid = eRid;
+		this.eAid = eAid;
+		this.estate = estate;
+		this.ebirthday = ebirthday;
+	}
 
-    public Long getEid() {
+	public Emp(Long eid, String epass, String ename, String etel, Long eRid, Long eAid, Integer estate, Area area,
+			Date ebirthday) {
+		super();
+		this.eid = eid;
+		this.epass = epass;
+		this.ename = ename;
+		this.etel = etel;
+		this.eRid = eRid;
+		this.eAid = eAid;
+		this.estate = estate;
+		this.area = area;
+		this.ebirthday = ebirthday;
+	}
+
+	
+	
+	public Long getEid() {
         return eid;
     }
 
@@ -83,11 +117,19 @@ public class Emp {
         this.ebirthday = ebirthday;
     }
 
+	public Area getArea() {
+		return area;
+	}
+
+	public void setArea(Area area) {
+		this.area = area;
+	}
+
 	@Override
 	public String toString() {
 		return "Emp [eid=" + eid + ", epass=" + epass + ", ename=" + ename + ", etel=" + etel + ", eRid=" + eRid
-				+ ", eAid=" + eAid + ", estate=" + estate + ", ebirthday=" + ebirthday + ", hashCode()=" + hashCode()
-				+ "]";
+				+ ", eAid=" + eAid + ", estate=" + estate + ", area=" + area + ", ebirthday=" + ebirthday
+				+ ", hashCode()=" + hashCode() + "]";
 	}
     
 }
