@@ -19,8 +19,32 @@ public class EmpServiceImpl implements EmpService{
 	
 	@Override
 	public List<Emp> findAllEmp() {
-		log.debug("EmpServiceImpl");
 		return empMapper.findAllEmp();
+	}
+	
+	@Override
+	public List<Emp> findEmpByAid(String aid){
+		return empMapper.findEmpByAid(aid);
+	}
+
+	@Override
+	public List<Emp> findEmpByEid(String eid) {
+		return empMapper.findEmpByID(eid);
+	}
+
+	@Override
+	public List<Emp> findEmpByEtel(String etel) {
+		return empMapper.findEmpByEtel(etel);
+	}
+
+	@Override
+	public List<Emp> findEmpByEname(String ename) {
+		return empMapper.findEmpByEname(ename);
+	}
+
+	@Override
+	public List<Emp> findQuitEmp() {
+		return empMapper.findQuitEmp();
 	}
 
 }

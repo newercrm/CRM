@@ -75,8 +75,8 @@ public class Area {
 
 	@Override
 	public String toString() {
-		return "Area [aid=" + aid + ", areaname=" + areaname + ", parentid=" + parentid + ", list=" + list
-				+ ", hashCode()=" + hashCode() + "]";
+		return "Area [aid=" + aid + ", areaname=" + areaname + ", parentid=" + parentid + ", list=" + list + ", area="
+				+ area + "]";
 	}
-    
+
 }

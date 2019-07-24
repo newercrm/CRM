@@ -38,8 +38,33 @@ public class EmpMapperImpl extends SqlSessionDaoSupport implements EmpMapper {
 	}
 
 	@Override
-	public List<Emp> findEmpByID(Emp emp) {
-		List<Emp> list = this.getSqlSessionTemplate().selectList(changeToNameSpace("findEmpByID"),emp.getEid());
+	public List<Emp> findEmpByID(String eid) {
+		List<Emp> list = this.getSqlSessionTemplate().selectList(changeToNameSpace("findEmpByID"),eid);
 		return list;
 	}
+
+	@Override
+	public List<Emp> findEmpByAid(String aid) {
+		List<Emp> list = this.getSqlSessionTemplate().selectList(changeToNameSpace("findEmpByAid"),aid);
+		return list;
+	}
+
+	@Override
+	public List<Emp> findEmpByEtel(String etel) {
+		List<Emp> list = this.getSqlSessionTemplate().selectList(changeToNameSpace("findEmpByEtel"),etel);
+		return list;
+	}
+
+	@Override
+	public List<Emp> findEmpByEname(String ename) {
+		List<Emp> list = this.getSqlSessionTemplate().selectList(changeToNameSpace("findEmpByEname"),ename);
+		return list;
+	}
+
+	@Override
+	public List<Emp> findQuitEmp() {
+		List<Emp> list = this.getSqlSessionTemplate().selectList(changeToNameSpace("findQuitEmp"));
+		return list;
+	}
+
 }
