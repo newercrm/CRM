@@ -1,7 +1,5 @@
 package com.crm.pojo;
 
-import java.math.BigDecimal;
-
 public class Client {
     private Long cid;
 
@@ -17,87 +15,125 @@ public class Client {
 
     private String caddress;
 
-    private Long cqq;
+    private String cqq;
 
     private String cemail;
+    
+    private Area area;
+    
 
-    public Long getCid() {
+	public Area getArea() {
+		return area;
+	}
+
+
+	public void setArea(Area area) {
+		this.area = area;
+	}
+
+	public Long getCid() {
         return cid;
     }
+	
+	public void setCid(Long cid) {
+		this.cid = cid;
+	}
 
-    public void setCid(Long cid) {
-        this.cid = cid;
-    }
+	public String getCname() {
+		return cname;
+	}
 
-    public String getCname() {
-        return cname;
-    }
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
 
-    public void setCname(String cname) {
-        this.cname = cname == null ? null : cname.trim();
-    }
+	public String getcEid() {
+		return cEid;
+	}
 
-    public String getcEid() {
-        return cEid;
-    }
+	public void setcEid(String cEid) {
+		this.cEid = cEid;
+	}
 
-    public void setcEid(String cEid) {
-        this.cEid = cEid == null ? null : cEid.trim();
-    }
+	public Long getcAid() {
+		return cAid;
+	}
 
-    public Long getcAid() {
-        return cAid;
-    }
+	public void setcAid(Long cAid) {
+		this.cAid = cAid;
+	}
 
-    public void setcAid(Long cAid) {
-        this.cAid = cAid;
-    }
+	public Integer getCstate() {
+		return cstate;
+	}
 
-    public Integer getCstate() {
-        return cstate;
-    }
+	public void setCstate(Integer cstate) {
+		this.cstate = cstate;
+	}
 
-    public void setCstate(Integer cstate) {
-        this.cstate = cstate;
-    }
+	public String getCtel() {
+		return ctel;
+	}
 
-    public String getCtel() {
-        return ctel;
-    }
+	public void setCtel(String ctel) {
+		this.ctel = ctel;
+	}
 
-    public void setCtel(String ctel) {
-        this.ctel = ctel;
-    }
+	public String getCaddress() {
+		return caddress;
+	}
 
-    public String getCaddress() {
-        return caddress;
-    }
+	public void setCaddress(String caddress) {
+		this.caddress = caddress;
+	}
 
-    public void setCaddress(String caddress) {
-        this.caddress = caddress == null ? null : caddress.trim();
-    }
+	public String getCqq() {
+		return cqq;
+	}
 
-    public Long getCqq() {
-        return cqq;
-    }
+	public void setCqq(String cqq) {
+		this.cqq = cqq;
+	}
 
-    public void setCqq(Long cqq) {
-        this.cqq = cqq;
-    }
+	public String getCemail() {
+		return cemail;
+	}
 
-    public String getCemail() {
-        return cemail;
-    }
+	public void setCemail(String cemail) {
+		this.cemail = cemail;
+	}
 
-    public void setCemail(String cemail) {
-        this.cemail = cemail == null ? null : cemail.trim();
-    }
+	public Client(Long cid, String cname, String cEid, Long cAid, Integer cstate, String ctel, String caddress,
+			String cqq, String cemail, Area area) {
+		super();
+		this.cid = cid;
+		this.cname = cname;
+		this.cEid = cEid;
+		this.cAid = cAid;
+		this.cstate = cstate;
+		this.ctel = ctel;
+		this.caddress = caddress;
+		this.cqq = cqq;
+		this.cemail = cemail;
+		this.area = area;
+	}
+
+	public Client() {
+		super();
+	}
 
 	@Override
 	public String toString() {
 		return "Client [cid=" + cid + ", cname=" + cname + ", cEid=" + cEid + ", cAid=" + cAid + ", cstate=" + cstate
-				+ ", ctel=" + ctel + ", caddress=" + caddress + ", cqq=" + cqq + ", cemail=" + cemail + ", hashCode()="
-				+ hashCode() + "]";
+				+ ", ctel=" + ctel + ", caddress=" + caddress + ", cqq=" + cqq + ", cemail=" + cemail + ", area=" + area
+				+ ", getArea()=" + getArea() + ", getCid()=" + getCid() + ", getCname()=" + getCname() + ", getcEid()="
+				+ getcEid() + ", getcAid()=" + getcAid() + ", getCstate()=" + getCstate() + ", getCtel()=" + getCtel()
+				+ ", getCaddress()=" + getCaddress() + ", getCqq()=" + getCqq() + ", getCemail()=" + getCemail()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 	}
-    
+
+	
+
+   
 }

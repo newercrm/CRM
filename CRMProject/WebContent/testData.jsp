@@ -19,5 +19,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<c:out value="${empbyetel}"></c:out>
 	<c:out value="${empbyename}"></c:out>
 	<c:out value="${quitemp}"></c:out>
+
+<c:out value="${num}"></c:out>
+
 </body>
 </html>

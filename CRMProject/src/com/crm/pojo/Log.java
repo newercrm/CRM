@@ -9,7 +9,7 @@ public class Log {
 	// 日志信息
 	private String logmessage;
 	// 所属员工id
-	private Long l_eid;
+	private Long lEid;
 	// 创建时间
 	private Timestamp logtime;
 	// 设定开始时间
@@ -19,43 +19,54 @@ public class Log {
 	// 日志状态 0 未完成 ， 1 已完成
 	private Integer lstate;
 	// 指定客户id
-	private Long l_cid;
+	private Long lCid;
 
 	// 员工与客户对象
 	private Emp emp;
 	private Client client;
-	
+
 	public Log() {
-		
+
 	}
-	public Log(Long lid, String logmessage, Long l_eid, Timestamp logtime, Timestamp starttime, Timestamp endtime,
-			Integer lstate, Long l_cid, Emp emp, Client client) {
+
+	public Log(Long lid, String logmessage, Long lEid, Timestamp logtime, Timestamp starttime, Timestamp endtime,
+			Integer lstate, Long lCid, Emp emp, Client client) {
 		super();
 		this.lid = lid;
 		this.logmessage = logmessage;
-		this.l_eid = l_eid;
+		this.lEid = lEid;
 		this.logtime = logtime;
 		this.starttime = starttime;
 		this.endtime = endtime;
 		this.lstate = lstate;
-		this.l_cid = l_cid;
+		this.lCid = lCid;
 		this.emp = emp;
 		this.client = client;
 	}
 
+	public Long getlEid() {
+		return lEid;
+	}
 
+	public void setlEid(Long lEid) {
+		this.lEid = lEid;
+	}
+
+	public Long getlCid() {
+		return lCid;
+	}
+
+	public void setlCid(Long lCid) {
+		this.lCid = lCid;
+	}
 
 	public String getLogmessage() {
 		return logmessage;
 	}
 
-
-
 	public void setLogmessage(String logmessage) {
 		this.logmessage = logmessage;
 	}
-
-
 
 	public Long getLid() {
 		return lid;
@@ -63,14 +74,6 @@ public class Log {
 
 	public void setLid(Long lid) {
 		this.lid = lid;
-	}
-
-	public Long getL_eid() {
-		return l_eid;
-	}
-
-	public void setL_eid(Long l_eid) {
-		this.l_eid = l_eid;
 	}
 
 	public Timestamp getLogtime() {
@@ -105,14 +108,6 @@ public class Log {
 		this.lstate = lstate;
 	}
 
-	public Long getL_cid() {
-		return l_cid;
-	}
-
-	public void setL_cid(Long l_cid) {
-		this.l_cid = l_cid;
-	}
-
 	public Emp getEmp() {
 		return emp;
 	}
@@ -128,14 +123,12 @@ public class Log {
 	public void setClient(Client client) {
 		this.client = client;
 	}
+
 	@Override
 	public String toString() {
-		return "Log [lid=" + lid + ", logmessage=" + logmessage + ", l_eid=" + l_eid + ", logtime=" + logtime
-				+ ", starttime=" + starttime + ", endtime=" + endtime + ", lstate=" + lstate + ", l_cid=" + l_cid
-				+ ", emp=" + emp + ", client=" + client + "]";
+		return "Log [lid=" + lid + ", logmessage=" + logmessage + ", lEid=" + lEid + ", logtime=" + logtime
+				+ ", starttime=" + starttime + ", endtime=" + endtime + ", lstate=" + lstate + ", lCid=" + lCid
+				+ ", emp=" + emp + ", client=" + client + ", hashCode()=" + hashCode() + "]";
 	}
-
-
-	
 
 }

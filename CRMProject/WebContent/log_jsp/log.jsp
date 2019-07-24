@@ -74,14 +74,14 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 	function openSaleChanceAddDialog(){
 		$("#dlg").dialog("open").dialog("setTitle","添加日志信息");
 		$("#createTime").val(getCurrentDateTime());
-		$("#createMan").val('${currentUser.trueName }');
-		url="${pageContext.request.contextPath}/saleChance/save.do";
+		$("#createMan").val("周豪");
+		/* url="${base}addLog"; */
 	}
 	
 	/*Ajax保存*/
-	function saveSaleChance(){
+	/* function saveSaleChance(){
 		$("#fm").form("submit",{
-			url:url,
+			url:"${base}addLog",
 			onSubmit:function(){
 				return $(this).form("validate");
 			},
@@ -98,7 +98,8 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 				}
 			}
 		});
-	}
+	} */
+	
 	
 	function openSaleChanceModifyDialog(){
 		var selectedRows=$("#dg").datagrid('getSelections');
@@ -122,6 +123,7 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 		url="${pageContext.request.contextPath}/saleChance/save.do?id="+row.id;
 	}
 	
+	/* 初始化 */
 	function resetValue(){
 		$("#customerName").val("");
 		$("#chanceSource").val("");
@@ -232,12 +234,12 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 	  closed="true" buttons="#dlg-buttons">
 	<div>
 	 	<form id="fm" method="post">
-	 		<table cellspacing="8px"  cellpadding="8px" >
+	 		<table cellspacing="25px"  cellpadding="25px" >
 	 			<tr>
 	 				<td>客户名称：</td>	
 	 				<td><input type="text" id="customerName" name="customerName" class="easyui-validatebox" required="true" style="border: 1px solid black;"/>&nbsp;<font color="red">*</font></td>
 	 				<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-	 				<td>机会来源：</td>
+	 				<td>客户联系电话：</td>
 	 				<td><input type="text" id="chanceSource" name="chanceSource"  style="border: 1px solid black;" /></td>
 	 			</tr>
 	 			<tr>
@@ -247,21 +249,21 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 	 				<td>联系电话：</td>
 	 				<td><input type="text" id="linkPhone" name="linkPhone"  style="border: 1px solid black;"/></td>
 	 			</tr>
-	 			<tr>
+	 			<!--  <tr>
 	 				<td>成功几率（%）：</td>
  				<td><input type="text" id="cgjl" name="cgjl" class="easyui-numberbox" data-options="min:0,max:100" required="true"  style="border: 1px solid black;"/>&nbsp;<font color="red">*</font>&nbsp;(范围是0~100)</td>
 	 				<td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-	 			</tr>
+	 			</tr>  -->
 	 			<tr>
 	 				<td>概要：</td>
 	 				<td colspan="4"><input type="text" id="overView" name="overView" style="width: 420px; border: 1px solid black;"/></td>
 	 			</tr>
-	 			<tr>
+	 			<!-- <tr>
 	 				<td valign="top">机会描述：</td>
 	 				<td colspan="4">
 	 					<textarea rows="5" cols="50" id="description" name="description"></textarea>
 	 				</td>
-	 			</tr>
+	 			</tr> -->
 	 			<tr>
 	 				<td>创建人：</td>
 	 				<td><input type="text" id="createMan" name="createMan" class="easyui-validatebox" required="true"  style="border: 1px solid black;"/>&nbsp;<font color="red">*</font></td>
@@ -270,13 +272,14 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 	 				<td><input type="text" id="createTime" name="createTime"  style="border: 1px solid black;"/>&nbsp;<font color="red">*</font></td>
 	 			</tr>
 	 			<tr>
-	 				<td>指派给：</td>
+	 				<td>指派时间：</td>
 	 				<td>
-	 					<input class="easyui-combobox" id="assignMan" name="assignMan"  data-options="panelHeight:'auto',editable:false,valueField:'id',textField:'trueName',url:'${pageContext.request.contextPath}/user/customerManagerComboList.do'"/>
+	 					<input type="date" id="starttime" name="starttime"  style="border: 1px solid black;" />
+	 					<%-- <input class="easyui-combobox" id="assignMan" name="assignMan"  data-options="panelHeight:'auto',editable:false,valueField:'id',textField:'trueName',url:'${pageContext.request.contextPath}/user/customerManagerComboList.do'"/> --%>
 					</td>
 	 				<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-	 				<td>指派时间：</td>
-	 				<td><input type="text" id="assignTime" name="assignTime"  style="border: 1px solid black;" /></td>
+	 				<td>结束时间：</td>
+	 				<td><input type="date" id="assignTime" name="assignTime"  style="border: 1px solid black;" /></td>
 	 			</tr>
 	 		</table>
 	 	</form>
