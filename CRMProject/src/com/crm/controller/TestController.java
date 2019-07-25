@@ -43,6 +43,9 @@ public class TestController {
 	@Autowired
 	private LogService logService;
 	
+	@Autowired
+	private  EmpService empService;
+	
 	
 	
 	/*
@@ -82,6 +85,45 @@ public class TestController {
 	 */
 	
 	
+	@RequestMapping(path="/findClientId")
+	public ModelAndView findClientId(HttpServletRequest request, HttpServletResponse response) throws ParseException {
+		ModelAndView modelAndView = new ModelAndView();
+		String logmessage = request.getParameter("logmessage");
+		String starttime = request.getParameter("starttime");
+		String endtime =  request.getParameter("endtime");
+		String logtime = request.getParameter("logtime");
+		String cname = request.getParameter("cname");
+		String ctel = request.getParameter("ctel");
+		String leid = request.getParameter("lEid");
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		
+		Timestamp timestamp1 = new Timestamp(format.parse(starttime).getTime());
+		Timestamp timestamp2 = new Timestamp(format.parse(endtime).getTime());
+		Timestamp timestamp3 = new Timestamp(format.parse(logtime).getTime());
+		
+		long eid = Integer.valueOf(leid);
+		Map<String,String> map = new HashMap<String,String>();
+		map.put("cname", cname);
+		map.put("ctel", ctel);
+		int cid = logService.findClientId(map);
+		long lcid = (int)cid;
+		Log log = new Log(null,logmessage, eid, timestamp3, timestamp1, timestamp2,
+				null, lcid, null, null);
+		int num = logService.addAllLog(log);
+		modelAndView.addObject("num", num);
+		modelAndView.setViewName("testData.jsp");
+		return modelAndView;
+	}
+	
+	@RequestMapping(path="/testaid/{abc}")
+	public ModelAndView testFindEmpByAid(@PathVariable("abc")String aid) {
+		List<Emp> emp1=empService.findEmpByAid(aid);
+		ModelAndView modelAndView=new ModelAndView();
+		modelAndView.addObject("empbyaid",emp1);
+		modelAndView.setViewName("/testData.jsp");
+		return modelAndView;
+		
+	}
 
 
 }

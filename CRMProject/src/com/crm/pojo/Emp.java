@@ -1,7 +1,6 @@
 package com.crm.pojo;
 
 import java.util.Date;
-import java.util.List;
 
 public class Emp {
     private Long eid;
@@ -18,7 +17,7 @@ public class Emp {
 
     private Integer estate;
 
-    private Area area;
+    private Area area1;
     
     private Date ebirthday;
     
@@ -49,7 +48,7 @@ public class Emp {
 		this.eRid = eRid;
 		this.eAid = eAid;
 		this.estate = estate;
-		this.area = area;
+		this.area1 = area;
 		this.ebirthday = ebirthday;
 	}
 
@@ -119,17 +118,17 @@ public class Emp {
     }
 
 	public Area getArea() {
-		return area;
+		return area1;
 	}
 
 	public void setArea(Area area) {
-		this.area = area;
+		this.area1 = area;
 	}
 
 	@Override
 	public String toString() {
 		return "Emp [eid=" + eid + ", epass=" + epass + ", ename=" + ename + ", etel=" + etel + ", eRid=" + eRid
-				+ ", eAid=" + eAid + ", estate=" + estate + ", area=" + area + ", ebirthday=" + ebirthday
+				+ ", eAid=" + eAid + ", estate=" + estate + ", area1=" + area1 + ", ebirthday=" + ebirthday
 				+ ", hashCode()=" + hashCode() + "]";
 	}
     
