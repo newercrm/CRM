@@ -21,6 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<c:out value="${quitemp}"></c:out>
 
 <c:out value="${num}"></c:out>
+
 <c:out value="${loglist}"></c:out>
 
 </body>

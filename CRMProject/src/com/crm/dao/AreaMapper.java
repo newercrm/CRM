@@ -16,17 +16,10 @@ public interface AreaMapper {
 			@Result(id=true,column="aid",jdbcType=JdbcType.BIGINT,property="aid",javaType=Long.class),
 			@Result(column="areaname",jdbcType=JdbcType.VARCHAR,property="areaname",javaType=String.class),
 			@Result(column="parentid",jdbcType=JdbcType.BIGINT,property="parentid",javaType=Long.class),
-//			@Result(column="parentid",property="Area",
-//					one=@One(select="com.crm.dao.AreaMapper.findAreaNameByParentidID"))
+			@Result(column="parentid",property="area",
+					one=@One(select="com.crm.dao.AreaMapper.findAreaNameByParentId"))
 	})
 	public Area findAreaNameByID(Emp emp);
-	
-	//根据ID查找父ID
-	@Select("select parentid from area where aid=#{aid,jdbcType=BIGINT}")
-	@Results(id="parentidResultMap",value= {
-		@Result(column="parentid",jdbcType=JdbcType.BIGINT,property="parentid",javaType=Long.class)
-	})
-	public Long findParentidByID();
 	
 	//根据父ID查找省份姓名
 	@Select("select * from area where aid=#{parentid,jdbcType=BIGINT}")
@@ -35,5 +28,5 @@ public interface AreaMapper {
 			@Result(column="areaname",jdbcType=JdbcType.VARCHAR,property="areaname",javaType=String.class),
 			@Result(column="parentid",jdbcType=JdbcType.BIGINT,property="parentid",javaType=Long.class)
 	})
-	public Area findAreaNameByParentidID();
+	public Area findAreaNameByParentId(Area area);
 }
