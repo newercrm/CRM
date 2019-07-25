@@ -1,5 +1,7 @@
 package com.crm.pojo;
 
+import java.util.List;
+
 public class Client {
     private Long cid;
 
@@ -20,7 +22,6 @@ public class Client {
     private String cemail;
     
     private Area area;
-    
 
 	public Area getArea() {
 		return area;
@@ -122,17 +123,17 @@ public class Client {
 		super();
 	}
 
+
 	@Override
 	public String toString() {
 		return "Client [cid=" + cid + ", cname=" + cname + ", cEid=" + cEid + ", cAid=" + cAid + ", cstate=" + cstate
 				+ ", ctel=" + ctel + ", caddress=" + caddress + ", cqq=" + cqq + ", cemail=" + cemail + ", area=" + area
-				+ ", getArea()=" + getArea() + ", getCid()=" + getCid() + ", getCname()=" + getCname() + ", getcEid()="
-				+ getcEid() + ", getcAid()=" + getcAid() + ", getCstate()=" + getCstate() + ", getCtel()=" + getCtel()
-				+ ", getCaddress()=" + getCaddress() + ", getCqq()=" + getCqq() + ", getCemail()=" + getCemail()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
 				+ "]";
 	}
 
+
+	
+	
 	
 
    

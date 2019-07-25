@@ -180,7 +180,7 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 	 		<th field="assignMan" width="50" align="center" hidden="true">指派人</th>
 	 		<th field="assignTime" width="50" align="center" hidden="true">指派时间</th>
 	 	</tr>
-	 	<c:forEach items="${logMess}" var="mm">
+	 	<c:forEach items="${logMess1}" var="mm">
 		<tr>
 	 		<th field="cb" checkbox="true" align="center"></th>
 	 		<th field="id" width="50" align="center">${mm.lid}</th>

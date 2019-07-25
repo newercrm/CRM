@@ -163,8 +163,8 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 	<div class="box">
 		<table id="dg" title="日志管理" class="easyui-datagrid"
 	 fitColumns="true" pagination="true" rownumbers="true"
-	 url="${pageContext.request.contextPath}/saleChance/list.do" fit="true" toolbar="#tb">
-	 <thead>
+	 fit="true" toolbar="#tb">
+	  <thead>
 	 	<tr>
 	 		<th field="cb" checkbox="true" align="center"></th>
 	 		<th field="id" width="50" align="center">编号</th>
@@ -172,29 +172,29 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 	 		<th field="customerName" width="100" align="center">客户名称</th>
 	 		<th field="linkPhone" width="100" align="center">客户联系电话</th>
 	 		<th field="overView" width="200" align="center">概要</th>
-	 		<th field="linkMan" width="100" align="center">联系人</th>
-	 		<th field="linkPhone" width="100" align="center">联系电话</th>
+	 		<th field="linkMan" width="100" align="center" hidden="true">联系人</th>
+	 		<th field="linkPhone" width="100" align="center" hidden="true">联系电话</th>
 	 		<th field="createTime" width="100" align="center">任务开始时间</th>
 	 		<th field="createTime" width="100" align="center">任务结束时间</th>
-	 		<th field="createMan" width="100" align="center" >创建人</th>
+	 		<th field="createMan" width="100" align="center" hidden="true" >创建人</th>
 	 		<th field="createTime" width="100" align="center">创建时间</th>
 	 		<th field="state" width="100" align="center" formatter="formatState">状态</th>
 	 		<th field="assignMan" width="50" align="center" hidden="true">指派人</th>
 	 		<th field="assignTime" width="50" align="center" hidden="true">指派时间</th>
 	 	</tr>
-	 	<c:forEach items="${logMess}" var="mm">
+	 	<c:forEach items="${logMess2}" var="mm">
 		<tr>
-	 		<th field="cb" checkbox="true" align="center"></th>
+	 		<th field="cb" checkbox="true" align="center" class="datagrid-cell-check"></th>
 	 		<th field="id" width="50" align="center">${mm.lid}</th>
 	 		<!--<th field="chanceSource" width="50" align="center" hidden="true">机会来源</th>-->
 	 		<th field="customerName" width="100" align="center">${mm.client.cname}</th>
 	 		<th field="linkPhone" width="100" align="center">${mm.client.ctel}</th>
 	 		<th field="overView" width="200" align="center">${mm.logmessage}</th>
-	 		<th field="linkMan" width="100" align="center">${mm.emp.ename }</th>
-	 		<th field="linkPhone" width="100" align="center">${mm.emp.etel}</th>
+	 		<th field="linkMan" width="100" align="center" hidden="true">${mm.emp.ename }</th>
+	 		<th field="linkPhone" width="100" align="center" hidden="true">${mm.emp.etel}</th>
 	 		<th field="createTime" width="100" align="center">${mm.starttime }</th>
 	 		<th field="createTime" width="100" align="center">${mm.endtime }</th>
-	 		<th field="createMan" width="100" align="center" >${mm.emp.ename }</th>
+	 		<th field="createMan" width="100" align="center" hidden="true">${mm.emp.ename }</th>
 	 		<th field="createTime" width="100" align="center">${mm.logtime }</th>
 	 		<th field="state" width="100" align="center" formatter="formatState">
 	 		<c:if test="${mm.lstate==0}">
@@ -223,8 +223,8 @@ String basePath1 = request.getScheme()+"://"+request.getServerName()+":"+request
 			&nbsp;创建人：&nbsp;<input type="text" id="s_createMan" size="20" onkeydown="if(event.keyCode==13) searchSaleChance()"/>
 			&nbsp;分配状态：&nbsp;<select class="easyui-combobox" id="s_state"  editable="false" panelHeight="auto">
 								    <option value="">请选择...</option>
-									<option value="0">未分配</option>
-									<option value="1">已分配</option>
+									<option value="0">未完成</option>
+									<option value="1">已完成</option>
 								</select>&nbsp;
 			<a href="javascript:searchSaleChance()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a>
 		</div>

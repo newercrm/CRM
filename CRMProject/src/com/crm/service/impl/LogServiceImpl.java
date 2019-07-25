@@ -38,8 +38,50 @@ public class LogServiceImpl implements LogService {
 	}
 
 	@Override
-	public int findClientId(Map<String,String> map) {
+	public int findClientId(Map<String, String> map) {
 		int cid = logMapper.findClientId(map);
 		return cid;
+	}
+
+	@Override
+	public List<Log> findLogById(Log log) {
+		List<Log> list = logMapper.findLogById(log);
+		return list;
+	}
+
+	@Override
+	public int findLogByClientName(String cname) {
+		int cid = logMapper.findLogByClientName(cname);
+		return cid;
+	}
+
+	@Override
+	public int findLogByEmpName(String name) {
+		int eid = logMapper.findLogByEmpName(name);
+		return eid;
+	}
+
+	@Override
+	public List<Log> findLogByClass(Log log) {
+		List<Log> list = logMapper.findLogByClass(log);
+		return list;
+	}
+
+	@Override
+	public int updateLogByClientAndSuper(Log log) {
+		int num = logMapper.updateLogByClientAndSuper(log);
+		return num;
+	}
+
+	@Override
+	public int findEmpId(Map<String, String> map) {
+		int eid = logMapper.findEmpId(map);
+		return eid;
+	}
+
+	@Override
+	public int deleteLogByLid(Log log) {
+		int num = logMapper.deleteLogByLid(log);
+		return num;
 	}
 }

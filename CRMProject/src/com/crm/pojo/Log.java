@@ -24,6 +24,8 @@ public class Log {
 	// 员工与客户对象
 	private Emp emp;
 	private Client client;
+	
+	private Log log;
 
 	public Log() {
 
@@ -112,6 +114,14 @@ public class Log {
 		return emp;
 	}
 
+	public Log getLog() {
+		return log;
+	}
+
+	public void setLog(Log log) {
+		this.log = log;
+	}
+
 	public void setEmp(Emp emp) {
 		this.emp = emp;
 	}
@@ -123,7 +133,8 @@ public class Log {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-
+	
+	
 	@Override
 	public String toString() {
 		return "Log [lid=" + lid + ", logmessage=" + logmessage + ", lEid=" + lEid + ", logtime=" + logtime

@@ -14,4 +14,17 @@ public interface LogService {
 	
 	public int findClientId(Map<String,String> map);
 	
+	public List<Log> findLogById(Log log);
+	
+	public int findLogByClientName(String cname);
+	
+	public int findLogByEmpName(String name);
+	
+	public List<Log> findLogByClass(Log log);
+	
+	public int updateLogByClientAndSuper(Log log);
+	
+	public int findEmpId(Map<String, String> map);
+	
+	public int deleteLogByLid(Log log);
 }

@@ -14,5 +14,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 <c:out value="${num}"></c:out>
+<c:out value="${loglist}"></c:out>
 </body>
 </html>

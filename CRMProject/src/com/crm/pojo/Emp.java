@@ -1,6 +1,7 @@
 package com.crm.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Emp {
     private Long eid;
@@ -21,12 +22,10 @@ public class Emp {
     
     private Date ebirthday;
     
+    
     public Emp() {
 		super();
 	}
-    public Emp(Long eid) {
-    	this.eid=eid;
-    }
     
 	public Emp(Long eid, String epass, String ename, String etel, Long eRid, Long eAid, Integer estate, Date ebirthday) {
 		super();
@@ -54,8 +53,7 @@ public class Emp {
 		this.ebirthday = ebirthday;
 	}
 
-	
-	
+
 	public Long getEid() {
         return eid;
     }

@@ -98,8 +98,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									src="resources/images/icon_authentication.png" width="16"
 									height="16" /></b> <span class="text-normal">员工信息</span>
 						</a></li>
-						<li><a href="../log_jsp/log.jsp"> <b class="sidebar-icon"><img
-									src="${base}fingLog" width="16" height="16" /></b>
+						<li><a href="${base}findLogById"> <b class="sidebar-icon"><img
+									src="${base}findLogById" width="16" height="16" /></b>
 								<span class="text-normal">日志管理</span>
 						</a></li>
 
